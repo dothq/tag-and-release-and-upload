@@ -7,6 +7,7 @@ const octokit = github.getOctokit(github_token);
 const context = github.context;
 
 const version = core.getInput('version', {required: true});
+const name = core.getInput('name');
 console.log(`Version: ${version}`);
 
 async function run()
@@ -72,7 +73,7 @@ async function run_inner()
 		{
 			...context.repo,
 			tag_name: version,
-			name: version,
+			name: name || version,
 			target_commitish: context.sha
 		});
 	}
