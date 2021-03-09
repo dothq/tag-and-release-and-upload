@@ -11,6 +11,9 @@ inputs:
     required: true
     description: Version to create
     
+  name: 
+    description: Name of release
+    
   assets:
     description: json string array of assets paths to upload to the release. E.G. '[ "win-x64.zip", "linux-x24.zip" ]'
     
