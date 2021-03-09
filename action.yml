@@ -1,5 +1,5 @@
-name: Tag and Release and Upload
-author: Jason Davis
+name: Tag Release Upload
+author: Jason Davis, Dot HQ
 description: Creates a tag, release, and uploads assets based on the version string specified
 
 inputs:
