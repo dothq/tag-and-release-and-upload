@@ -14,6 +14,9 @@ inputs:
   name: 
     description: Name of release
     
+  body_path: 
+    description: Path to a file that is the body of the release
+    
   assets:
     description: json string array of assets paths to upload to the release. E.G. '[ "win-x64.zip", "linux-x24.zip" ]'
     
