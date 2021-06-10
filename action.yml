@@ -23,6 +23,9 @@ inputs:
   overwrite:
     description: bool value to overwrite assets
   
+  prerelease: 
+    description: bool value to set release to prerelease
+  
 runs:
   using: node12
   main: index.js
