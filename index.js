@@ -9,6 +9,7 @@ const context = github.context;
 const version = core.getInput('version', {required: true});
 const name = core.getInput('name');
 const body_path = core.getInput('body_path');
+const prerelease = core.getInput('prerelease');
 console.log(`Version: ${version}`);
 
 async function run()
@@ -76,7 +77,8 @@ async function run_inner()
 			tag_name: version,
 			name: name || version,
 			target_commitish: context.sha,
-			body: fs.readFileSync(path.resolve(__dirname, body_path), "utf-8") || ""
+			body: fs.readFileSync(path.resolve(__dirname, body_path), "utf-8") || "",
+			prerelease: prerelease || false
 		});
 	}
 	
